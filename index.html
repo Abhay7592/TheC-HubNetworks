@@ -9,31 +9,34 @@
       background-color: #0f172a;
       color: white;
       font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
       text-align: center;
-      padding: 0 20px;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
     img.logo {
       width: 150px;
-      height: auto;
       margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: 2.8em;
       margin: 10px 0;
     }
 
     .typewriter {
       display: inline;
       font-weight: bold;
-      color: #f97316; /* orange-ish */
+      color: #f97316;
     }
 
     .blinking-cursor {
@@ -44,16 +47,60 @@
     }
 
     @keyframes blink {
-      0% { opacity: 1; }
+      0%, 100% { opacity: 1; }
       50% { opacity: 0; }
-      100% { opacity: 1; }
     }
 
     p.description {
-      font-size: 1.1em;
+      font-size: 1.2em;
       color: #94a3b8;
-      max-width: 600px;
       margin-top: 15px;
+    }
+
+    .coming-soon {
+      margin-top: 40px;
+      font-size: 1.5em;
+      color: #fbbf24;
+    }
+
+    form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    input, textarea {
+      background-color: #1e293b;
+      color: white;
+    }
+
+    button {
+      background-color: #f97316;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ea580c;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #64748b;
     }
 
     @media (max-width: 500px) {
@@ -63,15 +110,27 @@
   </style>
 </head>
 <body>
-  <img src="TheC-Hub Networks.webp" alt="The C-Hub Logo" class="logo">
+  <div class="container">
+    <img src="TheC-Hub Networks.webp" alt="The C-Hub Logo" class="logo">
+    <h1>The C-Hub Network</h1>
+    <h2><span class="typewriter">CIO</span><span class="blinking-cursor">|</span></h2>
+    <p class="description">
+        The C-Hub Network is a podcast platform that connects you with top-tier leaders of the modern business world — from CIOs, CTOs, CXOs to CEOs. We dive into their journeys, strategies, and predictions to help you understand what’s next in tech, pharma, and beyond.
+    </p>
 
-  <h1>The C-Hub Network</h1>
+    <div class="coming-soon">🚀 Website coming soon. Stay tuned.</div>
 
-  <h2><span class="typewriter">CIO</span><span class="blinking-cursor">|</span></h2>
+    <form action="https://formspree.io/f/xanelbzq" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
 
-  <p class="description">
-    The C-Hub Network is a podcast platform that connects you with top-tier leaders of the modern business world — from CIOs, CTOs, CXOs to CEOs. We dive into their journeys, strategies, and predictions to help you understand what’s next in tech, pharma, and beyond.
-  </p>
+    <footer>
+      © 2025 The C-Hub Network · All rights reserved
+    </footer>
+  </div>
 
   <script>
     const roles = ["CIO", "CXO", "CTO", "CEO"];
