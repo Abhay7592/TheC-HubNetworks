@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The C-Hub Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-color: #0f172a;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    img.logo {
+      width: 150px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 10px 0;
+    }
+
+    .typewriter {
+      display: inline;
+      font-weight: bold;
+      color: #f97316; /* orange-ish */
+    }
+
+    .blinking-cursor {
+      font-weight: 100;
+      font-size: 1.5em;
+      color: #f97316;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    p.description {
+      font-size: 1.1em;
+      color: #94a3b8;
+      max-width: 600px;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 2em; }
+      .typewriter { font-size: 1.2em; }
+    }
+  </style>
+</head>
+<body>
+  <img src="TheC-Hub Networks.webp" alt="The C-Hub Logo" class="logo">
+
+  <h1>The C-Hub Network</h1>
+
+  <h2><span class="typewriter">CIO</span><span class="blinking-cursor">|</span></h2>
+
+  <p class="description">
+    The C-Hub Network is a podcast platform that connects you with top-tier leaders of the modern business world — from CIOs, CTOs, CXOs to CEOs. We dive into their journeys, strategies, and predictions to help you understand what’s next in tech, pharma, and beyond.
+  </p>
+
+  <script>
+    const roles = ["CIO", "CXO", "CTO", "CEO"];
+    let index = 0;
+    const el = document.querySelector('.typewriter');
+
+    setInterval(() => {
+      index = (index + 1) % roles.length;
+      el.textContent = roles[index];
+    }, 2000);
+  </script>
+</body>
+</html>
